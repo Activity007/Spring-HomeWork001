@@ -20,7 +20,7 @@ public class CoffeeRestController {
         Map<String, Object> coffees = new HashMap<>();
         coffees.put("message", "Get all coffees Successfully");
         coffees.put("status", HttpStatus.OK.value());
-        coffees.put("payload",coffeeRepository.coffees());
+        coffees.put("payload",coffeeRepository.getCaffeeList());
         return coffees;
     }
 }
