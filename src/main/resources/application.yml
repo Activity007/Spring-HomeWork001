@@ -1,0 +1,35 @@
+#spring.application.name=test
+#server.port=8081
+
+info:
+  name: springConfiguration
+  description: demo project
+  version: 1.0.0
+  developer: candy
+  domain: facebook.com
+app-config:
+  name: spring boot
+  desc: hello Spring
+  version: 4.0.6
+  security:
+    jwt-secret: verysecure122
+    expiration: 365
+  kafka:
+    topic: student-topic
+    retry-count: 3
+
+spring:
+  threads:
+    virtual:
+      enabled: true
+    # check health and condition of using spring bean does it work or not
+management:
+  info:
+    env:
+      enabled: true
+  endpoints:
+    web:
+      exposure: # dak oy ke brer ban
+        include: health,info,metrics,beans
+      # include: '*'
+
